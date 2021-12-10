@@ -1,6 +1,6 @@
 # Kristiyan Srebrev's portfolio
 
-Well, I've created this portfolio as open-source with MIT license meaning you just can't sell it. Feel free to fork the repo and create your own.
+I've created this portfolio as `open-source` with [MIT license](https://github.com/ksrebrev/portfolio/blob/main/LICENSE) meaning you just can't sell it. Feel free to fork the repo and create your own.
 
 ## Available Scripts
 
