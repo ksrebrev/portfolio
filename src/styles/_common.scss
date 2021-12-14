@@ -1,0 +1,39 @@
+body {
+  background: url("../assets/jpg/background.jpg") repeat;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary900);
+}
+
+a:visited {
+  color: var(--secondary900);
+}
+
+.content {
+  padding: 0 20px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  color: var(--secondary900);
+
+  @media all and (min-width: 1440px) {
+    width: 1200px;
+    flex-basis: 1200px;
+  }
+
+  @media all and (min-width: 1600px) {
+    width: 1400px;
+    flex-basis: 1400px;
+  }
+
+  @media all and (min-width: 1920px) {
+    width: 1600px;
+    flex-basis: 1600px;
+  }
+
+  @media all and (min-width: 2450px) {
+    width: 1800px;
+    flex-basis: 1800px;
+  }
+}
