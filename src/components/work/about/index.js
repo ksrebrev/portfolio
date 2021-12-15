@@ -62,31 +62,31 @@ const About = () => {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <Link
-                to="https://ksrebrev.github.io/cover-letter/"
+              <a
+                href="https://ksrebrev.github.io/cover-letter/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 CV
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://www.linkedin.com/in/kristiyan-srebrev/"
+              <a
+                href="https://www.linkedin.com/in/kristiyan-srebrev/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 LinkedIn
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
-                to="https://github.com/ksrebrev"
+              <a
+                href="https://github.com/ksrebrev"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Github
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
