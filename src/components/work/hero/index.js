@@ -7,8 +7,6 @@ import "./styles.scss";
 const Hero = () => {
   let heroRef = useRef();
 
-  console.log(heroRef.current);
-
   useEffect(() => {
     /* Cursor */
     const onMouseMove = (e) => {
