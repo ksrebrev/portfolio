@@ -1,0 +1,36 @@
+.testimonial {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+
+  .image {
+    height: 146px;
+    width: 146px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 35px;
+    flex: 1 0 146px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+
+    p:first-of-type {
+      color: var(--secondary600);
+    }
+
+    h4 {
+      margin-bottom: 12px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 25px;
+    }
+  }
+}

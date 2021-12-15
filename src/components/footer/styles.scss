@@ -1,0 +1,43 @@
+footer {
+  margin-top: 70px;
+}
+
+.links {
+  display: flex;
+  > div {
+    width: 50%;
+    padding: 64px 0;
+  }
+
+  .social {
+    border-top: 1px solid var(--secondary200);
+
+    a {
+      text-transform: uppercase;
+      font-weight: 700;
+
+      &:not(:last-of-type) {
+        margin-right: 34px;
+      }
+    }
+  }
+
+  .nav {
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--secondary200);
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  padding: 50px 0;
+
+  p {
+    margin-left: 20px;
+    color: var(--secondary600);
+    font-size: 14px;
+  }
+}
