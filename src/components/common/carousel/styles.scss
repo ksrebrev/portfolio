@@ -1,0 +1,80 @@
+.carousel {
+  position: relative;
+
+  &.swiper-container {
+    display: flex;
+    flex-direction: column-reverse;
+
+    // CSS Grid/Flexbox bug size workaround below
+    // @see https://github.com/kenwheeler/slick/issues/982
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
+  }
+
+  .swiper-pagination {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--secondary900);
+      position: absolute;
+      z-index: 1;
+      top: 10px;
+      animation: pagination-active-bullet 30s linear infinite;
+    }
+
+    .swiper-pagination-bullet {
+      position: relative;
+      z-index: 2;
+      cursor: pointer;
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border: 1px solid var(--secondary500);
+      margin: 0 5px;
+
+      &.swiper-pagination-bullet-active:after {
+        content: "";
+        display: none;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--secondary900);
+        position: absolute;
+        z-index: 1;
+        top: 2px;
+        left: 2px;
+      }
+    }
+  }
+
+  &.autoplay-disabled {
+    .swiper-pagination {
+      &:after {
+        display: none;
+      }
+
+      .swiper-pagination-bullet.swiper-pagination-bullet-active:after {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@keyframes pagination-active-bullet {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}

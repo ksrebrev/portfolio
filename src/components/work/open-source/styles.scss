@@ -1,0 +1,45 @@
+.open-source {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 200px auto;
+
+  .about {
+    position: relative;
+    display: flex;
+
+    h2 {
+      position: absolute;
+      left: 0;
+      top: -50px;
+      color: var(--secondary900);
+      opacity: 0.05;
+      text-transform: uppercase;
+    }
+
+    h5 {
+      margin-right: 17px;
+    }
+  }
+
+  .links {
+    .design {
+      padding: 12px 18px;
+      border: 1px solid var(--secondary500);
+      display: flex;
+      align-items: center;
+      margin-right: 24px;
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    .code {
+      padding: 12px;
+      border-radius: 24px;
+      background: var(--secondary900);
+      display: flex;
+    }
+  }
+}
