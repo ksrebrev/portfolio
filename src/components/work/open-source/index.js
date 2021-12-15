@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import { ReactComponent as Figma } from "../../../assets/svg/icons/figma.svg";
 import { ReactComponent as Github } from "../../../assets/svg/icons/github.svg";
@@ -14,23 +13,23 @@ const OpenSource = () => (
       <p>Feel free to use it to create your own portfolio.</p>
     </div>
     <div className="links">
-      <Link
+      <a
         className="design"
-        to="https://www.figma.com/file/AD928fDcQoKFlSFyTGV65X/Portfolio?node-id=0%3A1"
+        href="https://www.figma.com/file/AD928fDcQoKFlSFyTGV65X/Portfolio?node-id=0%3A1"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Figma />
         <h6>Design file</h6>
-      </Link>
-      <Link
+      </a>
+      <a
         className="code"
-        to="https://github.com/ksrebrev/portfolio"
+        href="https://github.com/ksrebrev/portfolio"
         target="_blank"
         rel="noopener noreferrer"
       >
         <Github />
-      </Link>
+      </a>
     </div>
   </div>
 );
