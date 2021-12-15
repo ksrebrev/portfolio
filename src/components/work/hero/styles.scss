@@ -1,0 +1,100 @@
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  border: 1px solid var(--secondary400);
+  height: calc(100vh - 274px);
+
+  .hero {
+    --x: 50%;
+    --y: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .container {
+      margin-left: 10%;
+    }
+
+    h1 {
+      font-size: 78px;
+    }
+
+    h6 {
+      span:not(:last-of-type) {
+        margin-right: 12px;
+      }
+    }
+  }
+
+  .developer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: var(--secondary900);
+    color: var(--primary);
+    -webkit-mask-image: var(--mask);
+    mask-image: var(--mask);
+
+    --mask: radial-gradient(
+      circle at var(--x, 50%) var(--y, 50%),
+      black var(--maskSize1, 0%),
+      rgba(0, 0, 0, 0.1) calc(var(--maskSize1, 0%) + 0.1%),
+      transparent 0,
+      transparent var(--maskSize2, 0%),
+      rgba(0, 0, 0, 0.1) calc(var(--maskSize2, 0%) + 0.1%),
+      black var(--maskSize2, 0%),
+      rgba(0, 0, 0, 0.1) calc(var(--maskSize3, 0%) - 0.1%),
+      black var(--maskSize3, 0%),
+      rgba(0, 0, 0, 0.1) calc(var(--maskSize3, 0%) + 0.1%),
+      transparent 0
+    );
+  }
+}
+
+.more {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding: 55px 0;
+  color: var(--secondary700);
+  margin-bottom: 120px;
+
+  div {
+    display: flex;
+    align-items: center;
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0 0 0 20px;
+      display: flex;
+      li {
+        width: 14px;
+        height: 14px;
+        margin-right: 14px;
+
+        &:first-of-type {
+          width: 13px;
+          height: 13px;
+          border: 1px solid var(--secondary500);
+          background: var(--primary);
+        }
+
+        &:nth-of-type(2) {
+          background: var(--secondary900);
+        }
+
+        &:nth-of-type(3) {
+          background: var(--accent400);
+        }
+
+        &:last-of-type {
+          background: var(--secondary150);
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
