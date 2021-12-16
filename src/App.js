@@ -7,6 +7,9 @@ import Footer from "./components/footer";
 import Work from "./pages/work";
 import About from "./pages/about";
 
+// Projects
+import Avalog from "./pages/projects/avalog";
+
 export default function App() {
   return (
     <Router>
@@ -16,6 +19,7 @@ export default function App() {
         <Routes>
           <Route exact path="/" element={<Work />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/projects/avalog" element={<Avalog />}></Route>
         </Routes>
 
         <Footer />

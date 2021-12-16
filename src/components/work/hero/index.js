@@ -40,7 +40,11 @@ const Hero = () => {
       .then(() => {
         window.addEventListener("mousemove", throttle(onMouseMove, 30));
       });
-  });
+
+    return () => {
+      window.removeEventListener("mousemove", throttle(onMouseMove, 30));
+    };
+  }, []);
 
   return (
     <div className="content">

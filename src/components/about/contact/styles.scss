@@ -1,0 +1,38 @@
+.contact-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 75px;
+  position: relative;
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+    flex: 0 1 50%;
+    position: relative;
+
+    h2 {
+      text-transform: uppercase;
+      opacity: 0.05;
+      position: absolute;
+      left: 100px;
+      top: -50px;
+    }
+
+    h4 {
+      position: relative;
+      padding-bottom: 45px;
+
+      &:after {
+        content: "";
+        height: 28px;
+        width: 1px;
+        position: absolute;
+        bottom: 10px;
+        left: 14px;
+        background: var(--secondary200);
+      }
+    }
+  }
+}

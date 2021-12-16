@@ -11,9 +11,25 @@ a:visited {
   color: var(--secondary900);
 }
 
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+::-moz-selection {
+  background: var(--secondary900);
+  color: var(--primary);
+}
+
+::selection {
+  background: var(--secondary900);
+  color: var(--primary);
+}
+
 .content {
-  padding: 0 20px;
-  width: calc(100% - 40px);
+  padding: 0 40px;
+  width: calc(100% - 80px);
   margin: 0 auto;
   color: var(--secondary900);
 
