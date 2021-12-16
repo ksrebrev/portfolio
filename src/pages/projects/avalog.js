@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CoverLogo from "../../assets/png/projects/avalog/avalog-cover-logo.png";
 import Logo from "../../assets/png/projects/avalog/avalog-logo.png";
@@ -17,10 +18,15 @@ import { ReactComponent as IterateIcon } from "../../assets/svg/icons/iterate.sv
 import { ReactComponent as PrototypeIcon } from "../../assets/svg/icons/prototype.svg";
 import { ReactComponent as TestIcon } from "../../assets/svg/icons/test.svg";
 
+import { ReactComponent as ProgressButton } from "../../assets/svg/button-progress.svg";
+
 const Avalog = () => (
   <section className="project-wrapper">
     <div className="cover avalog">
       <div className="content">
+        <Link to="/">
+          <div className="back-button">Back to all projects</div>
+        </Link>
         <div className="title">
           <img src={CoverLogo} alt="logo" />
           <h3>Avalog</h3>
@@ -178,6 +184,13 @@ const Avalog = () => (
       <img src={Logotype} alt="Logotype" />
       <img src={Colors} alt="Colors" />
       <img src={Typography} alt="Typography" />
+    </div>
+    <div className="next-project">
+      <h2>Next project?</h2>
+      <Link to="/projects/bring-me-home" className="button-go">
+        <ProgressButton className="progress" />
+        <span>Go</span>
+      </Link>
     </div>
   </section>
 );

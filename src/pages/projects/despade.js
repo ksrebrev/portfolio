@@ -26,6 +26,9 @@ const Despade = () => (
       <h4>Typography</h4>
       <img src={Typography} alt="Typography" />
     </div>
+    <div className="next-project">
+      <h2>That's all for now.</h2>
+    </div>
   </section>
 );
 

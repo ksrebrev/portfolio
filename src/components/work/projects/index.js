@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { projectsList } from "../../../constants/projects";
 
@@ -43,11 +44,16 @@ const Projects = () => {
           .filter(({ type }) =>
             filters !== undefined ? type === filters : true
           )
-          .map(({ title, image, subtitle }) => (
+          .map(({ title, image, subtitle, titleDashCase }) => (
             <div className="item" key={title}>
               <h5>{title}</h5>
               <h2>{subtitle}</h2>
-              <img src={image} alt={title} />
+              <Link to={`/projects/${titleDashCase}`}>
+                <figure>
+                  <h5>View project</h5>
+                  <img src={image} alt={title} />
+                </figure>
+              </Link>
             </div>
           ))}
       </section>

@@ -1,8 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Dashboard from "../../assets/jpg/projects/enter-dao/dashboard.jpg";
 import DashboardDark from "../../assets/jpg/projects/enter-dao/dashboard-dark.jpg";
 import Governance from "../../assets/jpg/projects/enter-dao/governance.jpg";
+
+import { ReactComponent as ProgressButton } from "../../assets/svg/button-progress.svg";
 
 const EnterDao = () => (
   <section className="project-wrapper">
@@ -27,6 +30,13 @@ const EnterDao = () => (
       <img src={DashboardDark} alt="Dashboard dark" />
       <h4>Governance (Dark)</h4>
       <img src={Governance} alt="Governance" />
+    </div>
+    <div className="next-project">
+      <h2>Next project?</h2>
+      <Link to="/projects/despade" className="button-go">
+        <ProgressButton className="progress" />
+        <span>Go</span>
+      </Link>
     </div>
   </section>
 );

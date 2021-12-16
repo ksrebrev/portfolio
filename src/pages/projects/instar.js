@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Logotype from "../../assets/jpg/projects/instar/logotype.jpg";
 import Process from "../../assets/jpg/projects/instar/process.jpg";
 import Typography from "../../assets/jpg/projects/instar/typography-colors.jpg";
 import BusinessCards from "../../assets/jpg/projects/instar/business-cards.jpg";
+
+import { ReactComponent as ProgressButton } from "../../assets/svg/button-progress.svg";
 
 const Instar = () => (
   <section className="project-wrapper">
@@ -30,6 +33,13 @@ const Instar = () => (
       <img src={Typography} alt="Typography" />
       <h4>Business cards</h4>
       <img src={BusinessCards} alt="Business cards" />
+    </div>
+    <div className="next-project">
+      <h2>Next project?</h2>
+      <Link to="/projects/enter-dao" className="button-go">
+        <ProgressButton className="progress" />
+        <span>Go</span>
+      </Link>
     </div>
   </section>
 );

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import CoverLogo from "../../assets/png/projects/bring-me-home/bring-me-home-cover-logo.png";
 import Logo from "../../assets/png/projects/bring-me-home/bring-me-home-logo.png";
@@ -12,10 +13,15 @@ import { ReactComponent as DefineIcon } from "../../assets/svg/icons/define.svg"
 import { ReactComponent as IterateIcon } from "../../assets/svg/icons/iterate.svg";
 import { ReactComponent as PrototypeIcon } from "../../assets/svg/icons/prototype.svg";
 
+import { ReactComponent as ProgressButton } from "../../assets/svg/button-progress.svg";
+
 const BringMeHome = () => (
   <section className="project-wrapper">
     <div className="cover bring-me-home">
       <div className="content">
+        <Link to="/">
+          <div className="back-button">Back to all projects</div>
+        </Link>
         <div className="title">
           <img src={CoverLogo} alt="logo" />
           <h3>Bring me home</h3>
@@ -104,6 +110,13 @@ const BringMeHome = () => (
         and feed:
       </p>
       <img src={UserInterface} alt="User interface" />
+    </div>
+    <div className="next-project">
+      <h2>Next project?</h2>
+      <Link to="/projects/reconnect" className="button-go">
+        <ProgressButton className="progress" />
+        <span>Go</span>
+      </Link>
     </div>
   </section>
 );

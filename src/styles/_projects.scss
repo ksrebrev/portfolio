@@ -27,6 +27,16 @@
       position: relative;
     }
 
+    .back-button {
+      position: absolute;
+      left: 30px;
+      top: 30px;
+      padding: 8px 12px;
+      color: var(--primary);
+      border: 1px solid var(--primary);
+      text-transform: uppercase;
+    }
+
     .title {
       display: flex;
       flex-direction: column;
@@ -143,5 +153,83 @@
       top: 0;
       background: var(--secondary200);
     }
+  }
+
+  .button-go {
+    background: none;
+    padding: 0;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    width: 120px;
+    height: 120px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    pointer-events: auto;
+    cursor: pointer;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+  }
+
+  .next-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 100px;
+
+    h2 {
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-transform: uppercase;
+      opacity: 0.1;
+    }
+  }
+
+  .progress {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    transition: transform 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .button-go:hover .progress {
+    transform: scale3d(1.2, 1.2, 1);
+  }
+
+  .progress__circle,
+  .progress__path {
+    fill: none;
+    stroke: var(--secondary150);
+    stroke-width: 1px;
+  }
+
+  .button-go:focus-visible .progress__circle {
+    fill: var(--secondary400);
+  }
+
+  .progress__path {
+    stroke: var(--secondary500);
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+  }
+
+  .button-go:hover .progress__path {
+    stroke-dashoffset: 0;
   }
 }

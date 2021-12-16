@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import ScrollToTop from "./utils/ScrollToTop";
+
 import Header from "./components/header";
 import Footer from "./components/footer";
 
@@ -18,6 +20,7 @@ import Reconnect from "./pages/projects/reconnect";
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <>
         <Header />
 

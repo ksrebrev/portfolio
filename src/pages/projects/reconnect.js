@@ -1,10 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import Landing from "../../assets/jpg/projects/reconnect/landing.jpg";
 import PsychedelicTherapy from "../../assets/jpg/projects/reconnect/psychedelic-therapy.jpg";
 import Research from "../../assets/jpg/projects/reconnect/research.jpg";
 import Contact from "../../assets/jpg/projects/reconnect/contact.jpg";
 import About from "../../assets/jpg/projects/reconnect/about.jpg";
+
+import { ReactComponent as ProgressButton } from "../../assets/svg/button-progress.svg";
 
 const Reconnect = () => (
   <section className="project-wrapper">
@@ -31,6 +34,13 @@ const Reconnect = () => (
       <img src={About} alt="About" />
       <h4>Contact</h4>
       <img src={Contact} alt="Contact" />
+    </div>
+    <div className="next-project">
+      <h2>Next project?</h2>
+      <Link to="/projects/instar" className="button-go">
+        <ProgressButton className="progress" />
+        <span>Go</span>
+      </Link>
     </div>
   </section>
 );
