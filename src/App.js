@@ -5,6 +5,7 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 
 import Work from "./pages/work";
+import About from "./pages/about";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
 
         <Routes>
           <Route exact path="/" element={<Work />}></Route>
-          <Route path="/about">{/* <About /> */}</Route>
+          <Route path="/about" element={<About />}></Route>
         </Routes>
 
         <Footer />

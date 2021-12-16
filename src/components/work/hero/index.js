@@ -24,7 +24,6 @@ const Hero = () => {
 
     /* Timeline */
     const tl = gsap.timeline({ delay: 1 });
-    console.log(tl);
 
     tl.to(heroRef.current, {
       "--maskSize1": "20%",
