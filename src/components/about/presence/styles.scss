@@ -1,3 +1,5 @@
+@import "../../../styles/breakpoints";
+
 .presence-wrapper {
   display: flex;
   justify-content: space-between;
@@ -5,6 +7,10 @@
   padding-top: 75px;
   position: relative;
   margin-top: 75px;
+
+  @media all and (max-width: $mobile) {
+    flex-direction: column;
+  }
 
   &:before {
     content: "";
@@ -22,6 +28,12 @@
     flex-direction: column;
     padding-right: 70px;
     flex: 1 1 50%;
+
+    @media all and (max-width: $mobile) {
+      padding-right: 0;
+      margin-bottom: 45px;
+    }
+
     h4 {
       position: relative;
       padding-bottom: 45px;
@@ -44,6 +56,10 @@
       align-items: center;
       margin-top: 30px;
 
+      @media all and (max-width: $mobile) {
+        justify-content: center;
+      }
+
       li {
         display: flex;
         align-items: center;
@@ -63,6 +79,10 @@
 
         &:not(:last-of-type) {
           margin-right: 45px;
+
+          @media all and (max-width: $mobile) {
+            margin-right: 20px;
+          }
         }
       }
     }
@@ -95,6 +115,10 @@
         top: -70px;
         opacity: 0.05;
         z-index: 1;
+
+        @media all and (max-width: $mobile) {
+          top: -45px;
+        }
       }
 
       img {

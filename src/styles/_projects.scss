@@ -56,6 +56,7 @@
       color: var(--primary);
       opacity: 0.8;
       font-size: 0.8rem;
+      margin-bottom: 10px;
     }
 
     .subtitle {
@@ -63,6 +64,8 @@
       bottom: 20px;
       left: 40px;
       z-index: 2;
+      font-size: 1rem;
+      opacity: 1;
     }
 
     .photo-author {
@@ -78,6 +81,10 @@
     justify-content: space-between;
     align-items: center;
 
+    @media all and (max-width: $mobile) {
+      flex-direction: column;
+    }
+
     .summary {
       display: flex;
       flex-direction: column;
@@ -86,6 +93,9 @@
     img {
       margin-left: 60px;
       flex-shrink: 0;
+      @media all and (max-width: $mobile) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -107,11 +117,20 @@
     margin-bottom: 35px;
     font-size: 1.25rem;
     line-height: 1.75;
+
+    @media all and (max-width: $mobile) {
+      font-size: 1.2rem;
+      line-height: 1.5;
+    }
   }
 
   ul {
     margin: 35px 0;
     display: flex;
+
+    @media all and (max-width: $mobile) {
+      flex-direction: column;
+    }
 
     li {
       margin-right: 30px;
@@ -119,6 +138,11 @@
       line-height: 1.5;
       display: flex;
       align-items: center;
+
+      @media all and (max-width: $mobile) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
     }
 
     svg {
@@ -188,13 +212,22 @@
     position: relative;
     margin-top: 100px;
 
+    @media all and (max-width: $mobile) {
+      margin-top: 60px;
+    }
+
     h2 {
       position: absolute;
       top: -80px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
       text-transform: uppercase;
       opacity: 0.1;
+      width: 100%;
+      text-align: center;
+
+      @media all and (max-width: $mobile) {
+        top: -40px;
+      }
     }
   }
 
