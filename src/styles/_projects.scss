@@ -14,6 +14,11 @@
       background-size: cover;
     }
 
+    &.bring-me-home {
+      background-image: url("../assets/jpg/projects/bring-me-home/cover.jpg");
+      background-size: cover;
+    }
+
     .content {
       height: 100%;
       display: flex;
@@ -122,6 +127,21 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+
+  .simple {
+    position: relative;
+    padding-top: 55px;
+
+    &:before {
+      content: "";
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: var(--secondary200);
     }
   }
 }
