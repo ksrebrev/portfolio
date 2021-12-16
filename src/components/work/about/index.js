@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Power1, gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import photo from "../../../assets/jpg/my-photo.jpg";
 import { ReactComponent as DesignIcon } from "../../../assets/svg/design.svg";
@@ -13,39 +14,43 @@ const About = () => {
   const tl = useRef({});
   const q = gsap.utils.selector(aboutRef);
 
+  gsap.registerPlugin(ScrollTrigger);
+
   useEffect(() => {
+    const trigger = aboutRef.current;
+
     tl.current = gsap
       .timeline({
         scrollTrigger: {
-          trigger: q(".trigger"),
-          pin: true,
-          start: "top top",
+          trigger: trigger.querySelector(".trigger"),
+          start: "top center",
+          end: "bottom center",
         },
       })
       .to(q(".rect01"), {
         x: 6,
         y: -6,
-        duration: 0.3,
+        duration: 0.4,
         ease: Power1.easeOut,
       })
       .to(q(".rect02"), {
         x: 12,
         y: -12,
-        duration: 0.3,
+        duration: 0.4,
         delay: 0.1,
         ease: Power1.easeOut,
       })
       .to(q(".ellipse02"), {
         x: 6,
         y: -6,
-        duration: 0.3,
+        duration: 0.4,
         delay: 0.1,
         ease: Power1.easeOut,
       })
       .to(q(".ellipse01"), {
         x: 12,
         y: -12,
-        duration: 0.3,
+        duration: 0.4,
         delay: 0.1,
         ease: Power1.easeOut,
       });
@@ -92,7 +97,8 @@ const About = () => {
         </div>
       </div>
       <ul className="what-i-do" ref={aboutRef}>
-        <li className="trigger">
+        <i className="trigger"></i>
+        <li>
           <DesignIcon />
           <h5>
             As a <strong>product designer</strong>, I&#8217;m interested in

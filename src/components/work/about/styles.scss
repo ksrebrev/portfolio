@@ -1,12 +1,24 @@
+@import "../../../styles/breakpoints";
+
 .about-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 200px;
 
+  @media all and (max-width: $mobile) {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
   img {
     margin-right: 50px;
     flex-grow: 0;
+
+    @media all and (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
 
   .about {
@@ -20,8 +32,6 @@
 
     ul {
       display: flex;
-      list-style-type: none;
-      padding: 0;
       margin: 40px 0 0;
       text-transform: uppercase;
       font-weight: 700;
@@ -51,16 +61,28 @@
 
 .what-i-do {
   display: flex;
-  list-style-type: none;
   margin-bottom: 200px;
+
+  @media all and (max-width: $mobile) {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
 
   li {
     position: relative;
     display: flex;
     align-items: center;
 
+    @media all and (max-width: $mobile) {
+      margin-bottom: 30px;
+    }
+
     &:not(:last-of-type) {
       margin-right: 90px;
+
+      @media all and (max-width: $mobile) {
+        margin-right: 0;
+      }
     }
 
     &:before {
@@ -71,11 +93,19 @@
       position: absolute;
       left: 20px;
       top: -90px;
+
+      @media all and (max-width: $mobile) {
+        display: none;
+      }
     }
     svg {
       margin-right: 60px;
       flex-shrink: 0;
       overflow: visible;
+
+      @media all and (max-width: $mobile) {
+        margin-right: 30px;
+      }
     }
 
     h5 {

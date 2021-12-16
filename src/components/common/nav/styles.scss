@@ -8,14 +8,24 @@ nav {
       display: block;
       text-align: center;
       position: relative;
+      font-weight: 400;
+      color: var(--secondary700);
+    }
+
+    &.active {
+      span {
+        font-weight: 700;
+        color: var(--secondary900);
+      }
     }
 
     &:last-of-type span {
       min-width: 86px;
     }
 
-    &.active span {
-      font-weight: 700;
+    &:last-of-type.active span {
+      font-weight: 400;
+      color: var(--secondary700);
     }
 
     span:before {

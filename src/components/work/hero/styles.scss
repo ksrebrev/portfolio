@@ -1,8 +1,14 @@
+@import "../../../styles/breakpoints";
+
 .hero-wrapper {
   position: relative;
   width: 100%;
   border: 1px solid var(--secondary400);
   height: calc(100vh - 274px);
+
+  @media all and (max-width: $mobile) {
+    height: 50vh;
+  }
 
   .hero {
     --x: 50%;
@@ -17,6 +23,11 @@
 
     h1 {
       font-size: 78px;
+
+      @media all and (max-width: $mobile) {
+        font-size: 36px;
+        line-height: 1;
+      }
     }
 
     h6 {
@@ -62,12 +73,14 @@
   color: var(--secondary700);
   margin-bottom: 120px;
 
+  @media all and (max-width: $mobile) {
+    margin-bottom: 30px;
+  }
+
   div {
     display: flex;
     align-items: center;
     ul {
-      list-style-type: none;
-      padding: 0;
       margin: 0 0 0 20px;
       display: flex;
       li {

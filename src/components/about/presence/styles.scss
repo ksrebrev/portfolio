@@ -1,0 +1,132 @@
+@import "../../../styles/breakpoints";
+
+.presence-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 75px;
+  position: relative;
+  margin-top: 75px;
+
+  @media all and (max-width: $mobile) {
+    flex-direction: column;
+  }
+
+  &:before {
+    content: "";
+    height: 1px;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--secondary200);
+  }
+
+  .presence,
+  .hobbies {
+    display: flex;
+    flex-direction: column;
+    padding-right: 70px;
+    flex: 1 1 50%;
+
+    @media all and (max-width: $mobile) {
+      padding-right: 0;
+      margin-bottom: 45px;
+    }
+
+    h4 {
+      position: relative;
+      padding-bottom: 45px;
+
+      &:after {
+        content: "";
+        height: 28px;
+        width: 1px;
+        position: absolute;
+        bottom: 10px;
+        left: 14px;
+        background: var(--secondary200);
+      }
+    }
+  }
+
+  .presence {
+    ul {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+
+      @media all and (max-width: $mobile) {
+        justify-content: center;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        opacity: 0.4;
+        cursor: pointer;
+        transition: opacity 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &:not(:last-of-type) {
+          margin-right: 45px;
+
+          @media all and (max-width: $mobile) {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .hobbies {
+    padding-right: 0;
+    // CSS Grid/Flexbox bug size workaround below
+    // @see https://github.com/kenwheeler/slick/issues/982
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    min-height: 0;
+    min-width: 0;
+
+    .swiper-container {
+      padding-top: 90px;
+      margin-top: -90px;
+    }
+
+    .swiper-wrapper {
+      position: relative;
+      padding-top: 100px;
+      margin-top: -100px;
+
+      h2 {
+        text-transform: uppercase;
+        position: absolute;
+        right: 0;
+        top: -70px;
+        opacity: 0.05;
+        z-index: 1;
+
+        @media all and (max-width: $mobile) {
+          top: -45px;
+        }
+      }
+
+      img {
+        display: flex;
+        margin: 0 auto;
+        position: relative;
+        z-index: 2;
+      }
+    }
+  }
+}

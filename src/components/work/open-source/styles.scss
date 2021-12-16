@@ -1,12 +1,24 @@
+@import "../../../styles/breakpoints";
+
 .open-source {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 200px auto;
 
+  @media all and (max-width: $mobile) {
+    margin: 80px auto;
+    flex-direction: column;
+  }
+
   .about {
     position: relative;
     display: flex;
+
+    @media all and (max-width: $mobile) {
+      flex-direction: column;
+      text-align: center;
+    }
 
     h2 {
       position: absolute;
@@ -15,14 +27,29 @@
       color: var(--secondary900);
       opacity: 0.05;
       text-transform: uppercase;
+
+      @media all and (max-width: $mobile) {
+        transform: translateX(-50%);
+        left: 50%;
+      }
     }
 
     h5 {
       margin-right: 17px;
+
+      @media all and (max-width: $mobile) {
+        margin-right: 0;
+      }
     }
   }
 
   .links {
+    @media all and (max-width: $mobile) {
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin-top: 30px;
+    }
     .design {
       padding: 12px 18px;
       border: 1px solid var(--secondary500);

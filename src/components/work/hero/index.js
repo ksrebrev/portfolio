@@ -1,30 +1,27 @@
 import React, { useEffect, useRef } from "react";
 import { Sine, Back, gsap } from "gsap";
-import throttle from "lodash.throttle";
 
 import "./styles.scss";
 
 const Hero = () => {
   let heroRef = useRef();
 
+  const onMouseMove = (e) => {
+    const { clientX, clientY } = e;
+    const x = Math.round((clientX / window.innerWidth) * 100);
+    const y = Math.round((clientY / window.innerHeight) * 100);
+
+    gsap.to(heroRef.current, {
+      "--x": `${x}%`,
+      "--y": `${y}%`,
+      duration: 0.3,
+      ease: Sine.out,
+    });
+  };
+
   useEffect(() => {
-    /* Cursor */
-    const onMouseMove = (e) => {
-      const { clientX, clientY } = e;
-      const x = Math.round((clientX / window.innerWidth) * 100);
-      const y = Math.round((clientY / window.innerHeight) * 100);
-
-      gsap.to(heroRef.current, {
-        "--x": `${x}%`,
-        "--y": `${y}%`,
-        duration: 0.3,
-        ease: Sine.out,
-      });
-    };
-
     /* Timeline */
     const tl = gsap.timeline({ delay: 1 });
-    console.log(tl);
 
     tl.to(heroRef.current, {
       "--maskSize1": "20%",
@@ -39,9 +36,13 @@ const Hero = () => {
         ease: Back.out,
       })
       .then(() => {
-        window.addEventListener("mousemove", throttle(onMouseMove, 30));
+        window.addEventListener("mousemove", onMouseMove);
       });
-  });
+
+    return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+    };
+  }, []);
 
   return (
     <div className="content">

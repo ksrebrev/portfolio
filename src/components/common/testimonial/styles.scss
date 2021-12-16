@@ -1,7 +1,14 @@
+@import "../../../styles/breakpoints";
+
 .testimonial {
   display: flex;
   max-width: 80%;
   margin: 0 auto;
+
+  @media all and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
 
   .image {
     height: 146px;
@@ -10,6 +17,11 @@
     overflow: hidden;
     margin-right: 35px;
     flex: 1 0 146px;
+
+    @media all and (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
 
     img {
       width: 100%;
