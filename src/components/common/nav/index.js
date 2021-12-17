@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "./styles.scss";
 
@@ -11,9 +12,9 @@ const Nav = () => (
     <NavLink activeclassname="active" to="/about">
       <span>About</span>
     </NavLink>
-    <NavLink to="/about#contact">
+    <HashLink to="/about#contact" smooth={true}>
       <span>Contact</span>
-    </NavLink>
+    </HashLink>
   </nav>
 );
 
