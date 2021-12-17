@@ -23,5 +23,5 @@ export const testimonial03 = {
   title: "Blockchain developer @ LimeChain",
   image: image03,
   feedback:
-    "Kris is a very talented person. He is a designer and also a front-end developer with passion. In my opinion, he is a perfect person to collaborate with. I used to work with him on a couple of projects and his dedication was enormous and unique. We have known each other for 4 years as we used to work together. I admire his passion for work and his hardworking personality very much. As I have seen him from very close, I know he can learn things very well and adjust quickly to a new environment.",
+    "Kris is a very talented person. He is a designer and also a front-end developer with passion. In my opinion, he is a perfect person to collaborate with. I used to work with him on a couple of projects and his dedication was enormous and unique. We have known each other for 4 years as we used to work together. I admire his passion for work and his hardworking personality very much. As I have seen him from very close, I know he can learn things very well and adjust quickly to a new environment. He is the right person for every project where such a professionalism is needed.",
 };
