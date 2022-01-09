@@ -19,7 +19,14 @@ const Testimonials = () => (
       </h5>
       <h2>Not sorry</h2>
       <h5>
-        But some of my colleagues can tell you <strong>how I work</strong>
+        But you can request to see more from this{" "}
+        <a
+          href="https://drive.google.com/file/d/1RuAPlHiRRkFoqKhuXReYWGonppOWTpcn/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <strong>link</strong>
+        </a>
       </h5>
     </div>
     <Carousel

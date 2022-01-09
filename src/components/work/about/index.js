@@ -109,7 +109,7 @@ const About = () => {
         <li>
           <DevIcon />
           <h5>
-            My complimentary skills in <strong>web development</strong>,
+            My complimentary skills in <strong>web development</strong>,{" "}
             <strong>branding</strong> and <strong>business analysis</strong>{" "}
             help me to work better in teams and understand the whole picture.
           </h5>
